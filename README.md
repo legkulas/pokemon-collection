@@ -13,7 +13,7 @@ npm install
 ```bash
 quasar dev
 
-a port will a assigned after the is done eg. http://localhost:9000/#/
+a port will be assigned after the build is done eg. http://localhost:9000/#/
 ```
 
 
