@@ -14,6 +14,8 @@ npm install
 quasar dev
 
 a port will be assigned after the build is done eg. http://localhost:9000/#/
+
+open the link in your desired browser click the name of any pokemon 
 ```
 
 
