@@ -1,14 +1,14 @@
 <template>
   <q-page class="q-flex full-width">
-    <div class="q-pa-sm">
+    <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="pokemon-name q-pa-md q-gutter-sm">
           <PokemonList
             :pokemons="pokemons"
             @show-details="showPokemonDetails"
           />
         </div>
-        <div class="col-6">
+        <div class="pokemon-details q-pa-md q-gutter-sm">
           <PokemonDetail v-if="selectedPokemon" :pokemon="selectedPokemon" />
         </div>
       </div>
@@ -49,3 +49,16 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.pokemon-name,
+.pokemon-details {
+  width: 450px;
+}
+</style>
