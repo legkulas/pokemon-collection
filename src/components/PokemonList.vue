@@ -7,15 +7,26 @@
         :key="pokemon.id"
         @click="showPokemonDetails(pokemon)"
       >
+        {{ console.log(pokemon) }}
         {{ pokemon.name }}
       </li>
     </ul>
-    <button @click="previousPage" :disabled="currentPage === 1">
-      Previous
-    </button>
-    <button @click="nextPage" :disabled="currentPage === totalPages">
-      Next
-    </button>
+    <div class="btn-wrapper">
+      <button
+        class="button previous"
+        @click="previousPage"
+        :disabled="currentPage === 1"
+      >
+        Previous
+      </button>
+      <button
+        class="button next"
+        @click="nextPage"
+        :disabled="currentPage === totalPages"
+      >
+        Next
+      </button>
+    </div>
   </div>
 </template>
 
@@ -62,8 +73,62 @@ export default defineComponent({
   },
 });
 </script>
-<style>
+<style scoped>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 li {
+  margin-bottom: 10px;
   cursor: pointer;
+  background-color: greenyellow;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+li:hover {
+  animation: fadeIn 0.5s ease;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 48%;
+  margin-top: 40px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button + .button {
+  margin-left: 10px;
+}
+
+.button.previous {
+  background-color: #6c757d;
+}
+
+.button.next {
+  background-color: #28a745;
 }
 </style>
