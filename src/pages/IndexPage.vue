@@ -1,11 +1,16 @@
 <template>
   <q-page class="q-flex full-width">
-    <div class="row">
-      <div class="col-6">
-        <PokemonList :pokemons="pokemons" @show-details="showPokemonDetails" />
-      </div>
-      <div class="col-6">
-        <PokemonDetail v-if="selectedPokemon" :pokemon="selectedPokemon" />
+    <div class="q-pa-sm">
+      <div class="row">
+        <div class="col-6">
+          <PokemonList
+            :pokemons="pokemons"
+            @show-details="showPokemonDetails"
+          />
+        </div>
+        <div class="col-6">
+          <PokemonDetail v-if="selectedPokemon" :pokemon="selectedPokemon" />
+        </div>
       </div>
     </div>
   </q-page>

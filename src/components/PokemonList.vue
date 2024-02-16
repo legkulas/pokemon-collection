@@ -62,3 +62,8 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+li {
+  cursor: pointer;
+}
+</style>
