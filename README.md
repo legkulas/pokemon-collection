@@ -11,7 +11,7 @@ npm install
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
-quasar dev
+open any terminal and run > quasar dev
 
 a port will be assigned after the build is done eg. http://localhost:9000/#/
 
